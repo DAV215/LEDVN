@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 5) {
+        if (window.scrollY > 50) {
             document.getElementById('heade_bar').classList.add('fixed-top');
         } else {
             document.getElementById('heade_bar').classList.remove('fixed-top');
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
+window.addEventListener('scroll', fix_navbar());
 
 document.getElementById('next').onclick = function() {
     let list = document.querySelectorAll('.item');
@@ -132,22 +132,12 @@ prev.onclick = function() {
     slide_pos_ani();
 
 }
-var stt_showmore = 0;
-document.getElementById('showmore').onclick = function() {
-    stt_showmore = !stt_showmore;
-    let list = document.querySelectorAll('.card_item');
-    if (stt_showmore == 1) {
-        for (let i = 3; i < list.length; i++) {
-            list[i].style.transition = ' opacity 1.5s ease !important';
-            list[i].style.opacity = 1;
 
-            list[i].style.display = 'block';
-        }
-    } else {
-        for (let i = 3; i < list.length; i++) {
-            list[i].style.display = 'none';
-
-        }
-    }
-
+document.getElementById('prev_image').onclick = function() {
+    let list_image = document.querySelectorAll('.image_container');
+    document.getElementById('image_frame').prepend(list_image[list_image.length - 1]);
+}
+document.getElementById('next_image').onclick = function() {
+    let list_image = document.querySelectorAll('.image_container');
+    document.getElementById('image_frame').appendChild(list_image[0]);
 }
