@@ -71,6 +71,7 @@ function imagemess() {
 
 }
 
+
 function resize_bg_card() {
     const list_card = document.querySelectorAll('#row_maindirectory .card');
     for (var i = 0; i < list_card.length; i++) {
@@ -143,9 +144,11 @@ document.getElementById('showmore').onclick = function() {
 
             list[i].style.display = 'block';
         }
+        document.getElementById('showmore').innerHTML = "Ẩn bớt";
     } else {
         for (let i = 3; i < list.length; i++) {
             list[i].style.display = 'none';
+            document.getElementById('showmore').innerHTML = "Xem thêm";
 
         }
     }
