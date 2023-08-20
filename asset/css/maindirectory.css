@@ -135,8 +135,7 @@
         transform: translate(-10px, 200px) !important;
     }
     .readmore {}
-    .control_slider {}
-    .col-12 {}
-    .ti-angle-up {}
-    .ti-angle-down {}
+    .control_slider {
+        transform: translate(120px, 150px);
+    }
 }
