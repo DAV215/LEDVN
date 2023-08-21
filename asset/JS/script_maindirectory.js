@@ -52,7 +52,7 @@ function start_timer() {
     timer = setInterval(function() {
         show_automation();
 
-    }, 2000);
+    }, 3500);
 }
 
 function stopTimer() {

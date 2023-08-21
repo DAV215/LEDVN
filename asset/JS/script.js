@@ -11,14 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-document.getElementById('next').onclick = function() {
-    let list = document.querySelectorAll('.item');
-    document.getElementById('slide').appendChild(list[0]);
-}
-document.getElementById('prev').onclick = function() {
-    let list = document.querySelectorAll('.item');
-    document.getElementById('slide').prepend(list[list.length - 1]);
-}
+
 
 function sendMessageToMessenger() {
     // Replace 'USER_OR_PAGE_ID' with the recipient's Facebook user ID or Page ID
@@ -90,49 +83,8 @@ function resize_bg_card() {
 }
 resize_bg_card();
 
-let items = document.querySelectorAll('#slide_main_item .slide_item');
-let stt = 0;
-let active = 3;
-
-function slide_pos_ani() {
-    stt = 0;
-    for (var i = stt + active; i < items.length; i++) {
-        stt++;
-
-        items[i].style.transform = `translateX(${100*2.3*stt}px) scale(${1 - 0.2*stt}) perspective(16px) `;
-        items[i].style.zIndex = 10 - stt;
-        items[i].style.filter = 'blur(3px)';
-
-        items[i].style.opacity = stt > 2 ? 0 : 0.6;
-
-    }
-    stt = 0;
-    for (var i = active - 2; i >= 0; i--) {
-        stt++;
-        items[i].style.transform = `translateX(${-100*2.3*stt}px) translateZ(${25}px) scale(${1 - 0.2*stt}) perspective(16px) `;
-        items[i].style.zIndex = 10 - stt;
-        items[i].style.filter = 'blur(3px)';
-        items[i].style.opacity = stt > 2 ? 0 : 0.6;
-    }
-    items[active - 1].style.transform = `none`;
-    items[active - 1].style.zIndex = 999999;
-    items[active - 1].style.filter = 'none';
-    items[active - 1].style.opacity = 1;
 
 
-}
-slide_pos_ani();
-let next = document.getElementById('next_slide');
-let prev = document.getElementById('prev_slide');
-next.onclick = function() {
-    active = active + 1 < items.length + 1 ? active + 1 : active;
-    slide_pos_ani();
-}
-prev.onclick = function() {
-    active = active - 1 >= 1 ? active - 1 : active;
-    slide_pos_ani();
-
-}
 var stt_showmore = 0;
 document.getElementById('showmore').onclick = function() {
     stt_showmore = !stt_showmore;
