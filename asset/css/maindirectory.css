@@ -112,6 +112,39 @@
     display: none;
 }
 
+.dots {
+    position: absolute;
+    bottom: 2px;
+    display: flex;
+    color: #fd3838;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.dots li {
+    list-style: none;
+    cursor: auto;
+    width: 10px;
+    height: 10px;
+    margin: 1%;
+    background-color: #fd3838;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.dots li.active {
+    list-style: none;
+    cursor: auto;
+    width: 30px;
+}
+
+li {
+    cursor: none !important;
+}
+
 @media (max-width: 900px) {
     .slider_maindirecory {
         padding-top: 50px;

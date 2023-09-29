@@ -20,14 +20,29 @@ document.getElementById('prev_slide').onclick = function() {
     showslide();
 
 }
+let list_dot = document.querySelectorAll('.slider_maindirecory .dots li');
+for (let i = 0; i < list_dot.length; i++) {
+    list_dot[i].onclick = function() {
+        stt_slider = i;
+        showslide();
+    }
+
+}
+document.querySelector('.slider_maindirecory .dots').onmouseover = function() {
+    stopTimer();
+}
 
 function showslide() {
     let list = document.querySelectorAll('.slider_item');
+    let list_dot = document.querySelectorAll('.slider_maindirecory .dots li');
     for (let i = 0; i < list.length; i++) {
         if (i != stt_slider) {
             list[i].style.display = 'none';
+            list_dot[i].classList.remove('active');
+
         } else {
             list[i].style.display = 'block';
+            list_dot[i].classList.add('active');
 
         }
     }
