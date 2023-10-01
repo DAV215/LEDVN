@@ -1,3 +1,8 @@
+.maindirectory {
+    position: relative;
+    z-index: 9999 !important;
+}
+
 .slider_maindirecory {
     width: 50% !important;
     height: 400px !important;

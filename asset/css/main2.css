@@ -1,0 +1,57 @@
+.container_list {
+    width: 100%;
+    height: 800px !important;
+}
+
+@media (max-width: 900px) {
+    .container_list {
+        padding-bottom: 10% !important;
+        min-height: 2050px !important;
+        height: 100%;
+    }
+}
+
+.item {
+    height: 400px !important;
+    margin-bottom: 120px !important;
+}
+
+.item_avt img {
+    height: 350px !important;
+}
+
+.item_info {}
+
+.item_name {}
+
+.item_des {}
+
+.item_price {}
+
+.advise {}
+
+@media (max-width: 900px) {
+    .MAIN_ITEM {
+        position: relative !important;
+        margin: 20px 10%;
+        height: 7700px;
+    }
+    .list_item {
+        transform: translate(0, 150px);
+        padding: 0 !important;
+        text-align: center;
+        justify-content: center;
+    }
+    .item {
+        text-align: left;
+        padding: 0;
+        height: 400px !important;
+        margin-bottom: 120px !important;
+        margin-top: 80px !important;
+    }
+    .listpage {}
+    .listpage li {
+        padding: 5px;
+        margin: 10px;
+    }
+}
